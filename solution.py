@@ -10,5 +10,5 @@ def solution(x: np.array, y: np.array) -> bool:
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
     alpha=0.06
-    stat, p_value = ks_2samp(sample1, sample2)
+    stat, p_value = ks_2samp(x, y)
     return p_value < alpha # Ваш ответ, True или False
