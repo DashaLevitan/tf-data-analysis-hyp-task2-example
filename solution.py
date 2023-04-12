@@ -9,11 +9,6 @@ def solution(x: np.array, y: np.array) -> bool:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    flag = 0
-    ks_stat, p_value = ks_2samp(x, y)
-
-    # сравнение p-value с уровнем значимости
-    alpha = 0.06
-    if p_value < alpha:
-        flag = 1
-    return flag # Ваш ответ, True или False
+    alpha=0.06
+    stat, p_value = ks_2samp(sample1, sample2)
+    return p_value < alpha # Ваш ответ, True или False
